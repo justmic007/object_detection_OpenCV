@@ -26,19 +26,33 @@ To detect objects in images, add your image files to this directory:
 
 ## Running Detection
 
+### Static Image Detection
 ```bash
 python simple_object_detection.py
 ```
 
 The script will:
-1. Load an image (`./lady.jpg`)
+1. Load an image (`./img1.jpg`)
 2. Run YOLOv8 object detection
 3. Display the annotated image with detected objects
 4. Show the result at 30% scale for easier viewing
 
+### Live Camera Feed Detection
+```bash
+python live_camera_feed.py
+```
+
+The script will:
+1. Open your default camera (webcam)
+2. Run real-time YOLOv8 object detection on the video feed
+3. Display the annotated video with detected objects
+4. Mirror the camera feed for a selfie-like view
+5. Press 'q' to quit
+
 ## Project Files
 
-- `simple_object_detection.py` - Main detection script
+- `simple_object_detection.py` - Static image detection script
+- `live_camera_feed.py` - Real-time camera detection script
 - `environment.yml` - Conda environment configuration
 - `yolov8*.pt` - Pre-trained YOLOv8 models
 - `.gitignore` - Excludes model files and image files from git tracking
