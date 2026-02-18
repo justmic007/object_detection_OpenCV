@@ -10,7 +10,21 @@ cap = cv2.VideoCapture("./videos/street1.mp4")  # Open the default camera (0)
 while True:
     ret, frame = cap.read()  # Read a frame from the video
 
-    results = model(frame)  # Perform object detection on the frame
+    results = model.track(
+        frame,
+        classes=[
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+        ],  # Filter for all vehicles: 1=bicycle, 2=car, 3=motorcycle, 4=airplane, 5=bus, 6=train, 7=truck, 8=boat
+        persist=True,  # Persist tracks between frames
+    )  # Perform object detection and tracking on the frame
 
     annotated_frame = results[0].plot()  # Get the annotated frame with detections
 
