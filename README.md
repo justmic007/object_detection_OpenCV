@@ -71,11 +71,24 @@ The script will:
 4. Show the result at 50% scale for easier viewing
 5. Press 'q' to quit
 
+### Object Tracking & Counting
+```bash
+python object_counting.py
+```
+
+The script will:
+1. Load a video file (`./videos/bottles.mp4`)
+2. Track objects across frames using unique IDs
+3. Count total unique objects detected throughout the video
+4. Display the count on screen
+5. Press 'q' to quit
+
 ## Project Files
 
 - `simple_object_detection.py` - Static image detection script
 - `live_camera_feed.py` - Real-time camera detection script
 - `multi_object_from_video.py` - Video file detection script
+- `object_counting.py` - Object tracking and counting script
 - `environment.yml` - Conda environment configuration
 - `yolov8*.pt` - Pre-trained YOLOv8 models
 - `.gitignore` - Excludes model files and image files from git tracking
