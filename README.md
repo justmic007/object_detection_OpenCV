@@ -21,8 +21,18 @@ To detect objects in images, add your image files to this directory:
 
 1. **Supported formats**: `.jpg`, `.png`, and other common image formats
 
-
 **Note**: Image files are ignored by git (see `.gitignore`), so they won't be committed to the repository.
+
+## Adding Video Files
+
+To detect objects in videos, add your video files to the `videos/` directory:
+
+1. Create the videos folder: `mkdir -p videos`
+2. Download free videos from [Pexels](https://www.pexels.com/videos/) or other sources
+3. **Supported formats**: `.mp4`, `.avi`, `.mov`, and other common video formats
+4. Update the video path in `multi_object_from_video.py` if needed
+
+**Note**: Video files are ignored by git (see `.gitignore`), so they won't be committed to the repository.
 
 ## Running Detection
 
@@ -49,10 +59,23 @@ The script will:
 4. Mirror the camera feed for a selfie-like view
 5. Press 'q' to quit
 
+### Video File Detection
+```bash
+python multi_object_from_video.py
+```
+
+The script will:
+1. Load a video file (`./videos/street1.mp4`)
+2. Run YOLOv8 object detection on each frame
+3. Display the annotated video with detected objects
+4. Show the result at 50% scale for easier viewing
+5. Press 'q' to quit
+
 ## Project Files
 
 - `simple_object_detection.py` - Static image detection script
 - `live_camera_feed.py` - Real-time camera detection script
+- `multi_object_from_video.py` - Video file detection script
 - `environment.yml` - Conda environment configuration
 - `yolov8*.pt` - Pre-trained YOLOv8 models
 - `.gitignore` - Excludes model files and image files from git tracking
