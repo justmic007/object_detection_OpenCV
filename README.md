@@ -111,6 +111,19 @@ The script will:
 6. Display total unique vehicles tracked
 7. Press 'q' to quit
 
+### Object Segmentation
+```bash
+python segmentation.py
+```
+
+The script will:
+1. Load a video file (`./videos/people_walking2.mp4`)
+2. Perform instance segmentation on people (class 0)
+3. Draw segmentation masks with transparency
+4. Track people with unique IDs
+5. Display frame at 50% scale
+6. Press 'q' to quit
+
 ## Project Files
 
 - `simple_object_detection.py` - Static image detection script
@@ -119,6 +132,7 @@ The script will:
 - `object_counting.py` - Object tracking and counting script
 - `people_with_trail.py` - People tracking with movement trails script
 - `vehicles_with_trail.py` - Vehicle tracking with color-coded trails script
+- `segmentation.py` - Instance segmentation with tracking script
 - `environment.yml` - Conda environment configuration
 - `yolov8*.pt` - Pre-trained YOLOv8 models
 - `.gitignore` - Excludes model files and image files from git tracking

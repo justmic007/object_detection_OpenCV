@@ -1,6 +1,7 @@
 yolov8m.pt
 yolov8n.pt
 yolov8s.pt
+yolov8n-seg.pt
 img1.jpg
 img2.jpg
 /videos/*
