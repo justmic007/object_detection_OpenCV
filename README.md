@@ -83,12 +83,27 @@ The script will:
 4. Display the count on screen
 5. Press 'q' to quit
 
+### People Tracking with Trail
+```bash
+python people_with_trail.py
+```
+
+The script will:
+1. Load a video file (`./videos/people_walking.mp4`)
+2. Track people across frames with unique IDs
+3. Draw movement trails showing their path
+4. Only assign IDs to people appearing in 5+ frames (reduces false positives)
+5. Save annotated video as `annotated_people_tracking.mp4`
+6. Display total unique people tracked
+7. Press 'q' to quit
+
 ## Project Files
 
 - `simple_object_detection.py` - Static image detection script
 - `live_camera_feed.py` - Real-time camera detection script
 - `multi_object_from_video.py` - Video file detection script
 - `object_counting.py` - Object tracking and counting script
+- `people_with_trail.py` - People tracking with movement trails script
 - `environment.yml` - Conda environment configuration
 - `yolov8*.pt` - Pre-trained YOLOv8 models
 - `.gitignore` - Excludes model files and image files from git tracking
