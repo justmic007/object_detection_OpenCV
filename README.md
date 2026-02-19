@@ -97,6 +97,20 @@ The script will:
 6. Display total unique people tracked
 7. Press 'q' to quit
 
+### Vehicle Tracking with Trail
+```bash
+python vehicles_with_trail.py
+```
+
+The script will:
+1. Load a video file (`./videos/traffic.mp4`)
+2. Track vehicles (bicycle, car, bus, truck) across frames with unique IDs
+3. Draw color-coded bounding boxes and movement trails for each vehicle type
+4. Only assign IDs to vehicles appearing in 5+ frames (reduces false positives)
+5. Save annotated video as `annotated_vehicles_tracking.mp4`
+6. Display total unique vehicles tracked
+7. Press 'q' to quit
+
 ## Project Files
 
 - `simple_object_detection.py` - Static image detection script
@@ -104,6 +118,7 @@ The script will:
 - `multi_object_from_video.py` - Video file detection script
 - `object_counting.py` - Object tracking and counting script
 - `people_with_trail.py` - People tracking with movement trails script
+- `vehicles_with_trail.py` - Vehicle tracking with color-coded trails script
 - `environment.yml` - Conda environment configuration
 - `yolov8*.pt` - Pre-trained YOLOv8 models
 - `.gitignore` - Excludes model files and image files from git tracking
